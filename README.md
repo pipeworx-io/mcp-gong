@@ -81,3 +81,7 @@ The gateway picks the right tool and fills the arguments automatically.
 ## License
 
 MIT
+
+## No MCP client? Call it over HTTP
+
+This pack runs against a connected gong account, so it needs a Pipeworx key: sign in at https://pipeworx.io/account, connect gong, then call `POST https://gateway.pipeworx.io/v1/tools/gong_list_calls` with `Authorization: Bearer <your Pipeworx key>`. Inspect any tool: `GET https://gateway.pipeworx.io/v1/tools/gong_list_calls`. Find one: `POST https://gateway.pipeworx.io/v1/tools/search_packs` with `{"query":"..."}`.
