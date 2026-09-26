@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-gong",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Gong MCP — wraps the Gong API v2 (OAuth)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-628af7f3536329161324a99e49e234518073c28630362093588e1e33f5350d8a",
-    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
+    "sourceHash": "v1-b6d2b99886a4d8aab7ee3d2f3e098b4b6f2d083db1a560209560a0264c995a59",
+    "sourceCommit": "1064560fd9dcd0d6fc2606298c2ba244b3a1fbeb"
   }
 }
