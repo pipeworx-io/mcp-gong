@@ -1,0 +1,79 @@
+[
+  {
+    "name": "gong_list_calls",
+    "description": "List recorded calls from your workspace with optional date filtering. Returns call IDs, dates, participants, duration, and engagement metrics. Supports pagination for large result sets.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "fromDateTime": {
+          "type": "string",
+          "description": "Start of date range (ISO 8601, e.g. \"2024-01-01T00:00:00Z\")"
+        },
+        "toDateTime": {
+          "type": "string",
+          "description": "End of date range (ISO 8601)"
+        },
+        "cursor": {
+          "type": "string",
+          "description": "Pagination cursor from a previous response"
+        }
+      }
+    }
+  },
+  {
+    "name": "gong_get_call",
+    "description": "Get full details for a specific call by ID. Returns participants, duration, call metadata, engagement metrics, and key moments.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "callId": {
+          "type": "string",
+          "description": "The Gong call ID"
+        }
+      },
+      "required": [
+        "callId"
+      ]
+    }
+  },
+  {
+    "name": "gong_get_transcript",
+    "description": "Retrieve the full conversation transcript for a call with speaker names, timestamps, and dialogue. Use after gong_get_call to analyze specific conversations.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "callId": {
+          "type": "string",
+          "description": "The Gong call ID"
+        }
+      },
+      "required": [
+        "callId"
+      ]
+    }
+  },
+  {
+    "name": "gong_list_users",
+    "description": "List all users in your workspace. Returns user names, IDs, email addresses, roles, and activity status.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "gong_search_calls",
+    "description": "Search calls by keyword or phrase (e.g., 'pricing', 'objection', 'budget'). Returns matching calls ranked by relevance.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "keyword": {
+          "type": "string",
+          "description": "Keyword to search for in calls"
+        }
+      },
+      "required": [
+        "keyword"
+      ]
+    }
+  }
+]
